@@ -1,5 +1,3 @@
-import {FaTimes} from 'react-icons/fa'
-
 const Modal = ({showModal,win,closeModal}) => {
     if(!showModal) {
         return null

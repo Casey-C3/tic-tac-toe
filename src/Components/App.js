@@ -21,11 +21,13 @@ const App = () => {
 
 
   const placeMarker = (value) => {
-    let rounds = round+1
-    setRound(rounds)
+    
+    
     if(board[value].length === 0) {
       let newBoard = [...board]
       newBoard[value] = turn ? 'X':'O'
+      let rounds = round+1
+      setRound(rounds)
       for(let i = 0; i < winState.length; i++) {
         let slot = winState[i][0]
         let slot1 = winState[i][1]
@@ -44,7 +46,7 @@ const App = () => {
       setTurn(!turn)
       
     }  
-    if(rounds === 9 && winner=== '') {
+    if(round === 8 && winner=== '') {
       setDraw(!draw)
       setModal(true)
       
